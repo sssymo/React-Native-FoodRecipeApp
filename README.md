@@ -8,7 +8,7 @@ Clone my repo : <br>
 
 git clone https://github.com/sssymo/React-Native-RecipesApp.git
 
-Install Modules in frontend & backend using node package manager: <br>
+Install Modules in ./frontend & ./backend using node package manager: <br>
 
 npm i
 
