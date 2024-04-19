@@ -6,15 +6,16 @@ Simple React Native app that allows you to scroll through the recipes, leave a r
 <h2>Installation</h2><br>
 Clone my repo : <br>
 
-'git clone https://github.com/sssymo/React-Native-RecipesApp.git'
+git clone https://github.com/sssymo/React-Native-RecipesApp.git
 
 Install Modules in frontend & backend using node package manager: <br>
 
-'npm i'
+npm i
 
 <h2>Usage</h2> <br>
 Configure the BASE_URL in ./constants/index to your private ip example 192.168.1.x:3000 .
 
 then run in frontend & backend using :<br>
-'npm start' 
+
+npm start
 
