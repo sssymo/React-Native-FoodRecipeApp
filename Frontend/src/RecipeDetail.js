@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, Image, ScrollView, StyleSheet, TouchableOpacity } from 'react-native';
+import {BASE_URL} from "../constants/ip";
 import Carousel from 'react-native-snap-carousel';
 import StarRating from 'react-native-star-rating';
 import { LogBox } from 'react-native';
@@ -15,7 +16,7 @@ const RecipeDetailScreen = ({ route, navigation }) => {
   );
 
   const getImageUrl = (imageName) => {
-    return `http://192.168.1.6:1337${imageName.url}`;
+    return `http://${BASE_URL}:1337${imageName.url}`;
   };
 
   const renderRecipeDetails = () => {

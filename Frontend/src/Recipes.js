@@ -15,7 +15,10 @@ import axios from 'axios';
 import RNPickerSelect from 'react-native-picker-select';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { AntDesign } from '@expo/vector-icons';
-
+import { BASE_URL } from "../constants/ip";
+import { LogBox } from 'react-native';
+LogBox.ignoreLogs(['Warning: ...']);
+LogBox.ignoreAllLogs();
 const RecipesScreen = ({ navigation }) => {
   const [recipes, setRecipes] = useState([]);
   const [categories, setCategories] = useState([]);
@@ -34,7 +37,7 @@ const RecipesScreen = ({ navigation }) => {
       setSearchText('');
       setSelectedCategory('');
       setSortCriteria('name');
-      // Go Back To The First Element Of The FlatList
+   
       flatListRef.current?.scrollToOffset({ animated: true, offset: 0 });
     }, 1100);
   };
@@ -71,7 +74,8 @@ const RecipesScreen = ({ navigation }) => {
   useEffect(() => {
     const fetchRecipes = async () => {
       try {
-        const response = await axios.get('http://192.168.1.6:1337/api/recipes?populate=*');
+        const url= getUrl();
+        const response = await axios.get(url);
         setRecipes(response.data.data);
 
         const categories = Array.from(new Set(response.data.data.map(recipe => recipe.attributes.category)));
@@ -90,13 +94,15 @@ const RecipesScreen = ({ navigation }) => {
   const filterByName = (recipe) => {
     return recipe.attributes.name.toLowerCase().includes(searchText.toLowerCase());
   };
-
+  const getUrl = () => {
+    return `http://${BASE_URL}:1337/api/recipes?populate=*`;
+  };
   const filterByCategory = (recipe) => {
     return selectedCategory === '' || recipe.attributes.category === selectedCategory;
   };
 
   const renderRecipeItem = ({ item }) => {
-    const imageUrl = `http://192.168.1.6:1337${item.attributes.cover.data.attributes.url}`;
+    const imageUrl = `http://${BASE_URL}:1337${item.attributes.cover.data.attributes.url}`;
     return (
       <TouchableOpacity onPress={() => navigation.navigate('RecipeDetail', { recipe: item })}>
         <View style={styles.recipeContainer}>
@@ -111,6 +117,7 @@ const RecipesScreen = ({ navigation }) => {
       </TouchableOpacity>
     );
   };
+
 
   const filteredRecipes = recipes
     .filter((recipe) => filterByName(recipe) && filterByCategory(recipe))
