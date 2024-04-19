@@ -13,9 +13,9 @@ Install Modules in frontend & backend using node package manager: <br>
 npm i
 
 <h2>Usage</h2> <br>
-Configure the BASE_URL in ./constants/index to your private ip example 192.168.1.x:3000 .
+Configure the BASE_URL in ./frontend/constants/ip to your private ip example 192.168.1.x .
 
-then run in frontend & backend using :<br>
+then run in ./frontend & ./backend using :<br>
 
 npm start
 
