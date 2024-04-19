@@ -1,0 +1,39 @@
+{
+  "name": "recipesapp",
+  "version": "1.0.0",
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "@expo/metro-runtime": "~3.1.1",
+    "@expo/vector-icons": "^14.0.0",
+    "@invertase/react-native-apple-authentication": "^2.3.0",
+    "@react-native-community/datetimepicker": "^7.6.2",
+    "@react-native-community/viewpager": "^5.0.11",
+    "@react-navigation/drawer": "^6.6.6",
+    "@react-navigation/native": "^6.1.9",
+    "@react-navigation/stack": "^6.3.20",
+    "axios": "^1.6.7",
+    "expo": "~50.0.5",
+    "expo-status-bar": "~1.11.1",
+    "lottie-react-native": "^6.6.0",
+    "react": "18.2.0",
+    "react-dom": "^18.2.0",
+    "react-native": "0.73.2",
+    "react-native-fbsdk": "^3.0.0",
+    "react-native-google-signin": "^2.1.1",
+    "react-native-picker-select": "^9.0.1",
+    "react-native-snap-carousel": "^3.9.1",
+    "react-native-star-rating": "^1.1.0",
+    "react-native-web": "^0.19.10",
+    "tailwind-rn": "^4.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0"
+  },
+  "private": true
+}

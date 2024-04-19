@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "recipes",
+  "info": {
+    "singularName": "recipe",
+    "pluralName": "recipes",
+    "displayName": "Recipes",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "category": {
+      "type": "string"
+    },
+    "carousel": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "recipeid": {
+      "type": "uid"
+    },
+    "instructions": {
+      "type": "text"
+    },
+    "dateofcreation": {
+      "type": "date"
+    },
+    "components": {
+      "type": "text"
+    },
+    "Likes": {
+      "type": "biginteger"
+    },
+    "difficult": {
+      "type": "float",
+      "max": 5,
+      "min": 0,
+      "default": 3
+    },
+    "rate": {
+      "type": "float",
+      "min": 0,
+      "max": 5
+    }
+  }
+}
