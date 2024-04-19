@@ -1,4 +1,4 @@
-#React Native Expo Recipes App <br>
+<h1>React Native Expo Recipes App </h1><br>
 
 ##Introduction <br>
 Simple React Native app that allows you to scroll through the recipes, leave a rating and, if you are interested, replicate them following the procedure in the description.<br>
