@@ -1,5 +1,4 @@
 <h1>React Native Expo Food Recipe App </h1><br>
-
 <h2>Demo</h2>
 https://github.com/sssymo/React-Native-RecipesApp/assets/151460618/66c8cb2b-819a-45cc-a366-9f963bb275fa
 
